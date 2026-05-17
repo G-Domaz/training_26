@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>تسجيل التدريب الصيفي 2026</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header>
+    <h1>التدريب الصيفي 2026 - المعهد العالي للسياحة والفنادق بالغردقة</h1>
+  </header>
+
+  <main>
+    <div class="form-section">
+      <h3>📋 بيانات التسجيل</h3>
+
+      <input type="text" id="name" placeholder="الاسم بالكامل">
+
+      <input type="text" id="national-id" placeholder="الرقم القومي">
+      <p class="note">⚠️ رجاء كتابة الرقم القومي باللغة الإنجليزية (أرقام إنجليزية فقط)</p>
+
+      <input type="text" id="phone" placeholder="رقم الهاتف (أرقام إنجليزية فقط)">
+
+      <select id="level">
+        <option value="">-- الفرقة الدراسية --</option>
+        <option value="الفرقة الأولى">الفرقة الأولى</option>
+        <option value="الفرقة الثانية">الفرقة الثانية</option>
+        <option value="الفرقة الثالثة">الفرقة الثالثة</option>
+        <option value="الفرقة الرابعة">الفرقة الرابعة</option>
+      </select>
+
+      <select id="choice1" onchange="updateChoice2()">
+        <option value="">-- اختر رغبة أولى --</option>
+        <option value="Reception">Reception</option>
+        <option value="Kitchen">Kitchen</option>
+        <option value="Service">Service</option>
+      </select>
+
+      <select id="choice2">
+        <option value="">-- اختر رغبة ثانية --</option>
+      </select>
+
+      <input type="text" id="address" placeholder="محل الإقامة">
+
+      <button onclick="submitForm()">تسجيل</button>
+    </div>
+
+    <div id="loading">⏳ جاري الإرسال...</div>
+    <div id="message"></div>
+  </main>
+
+  <footer>
+    جميع الحقوق محفوظة © المعهد العالي للسياحة والفنادق بالغردقة 2026
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
